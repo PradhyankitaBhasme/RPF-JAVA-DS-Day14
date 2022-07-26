@@ -17,7 +17,7 @@ public class Node<K> {
         this.data = data;
     }
 
-    public Node getNext() {
+    public Node<K> getNext() {
         return next;
     }
 
