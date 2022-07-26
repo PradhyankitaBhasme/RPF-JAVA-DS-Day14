@@ -8,6 +8,7 @@ public class LinkedList {
         Node<Integer> node3=new Node<>(70);
         node1.setNext(node2);
         node2.setNext(node3);
+
     }
 
 }
