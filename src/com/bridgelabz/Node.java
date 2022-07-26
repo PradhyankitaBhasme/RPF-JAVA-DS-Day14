@@ -1,6 +1,7 @@
 package com.bridgelabz;
 
 public class Node<K> {
+    
     private K key;
     private Node next;
 
