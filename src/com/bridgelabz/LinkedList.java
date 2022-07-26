@@ -24,6 +24,15 @@ public class LinkedList<K> {
             this.tail=node;
         }
     }
+    public void print(){
+        Node<K> n=head;
+        while (!n.equals(tail)){
+            System.out.print(n.getData()+ " -> ");
+            n=n.getNext();
+        }
+        System.out.println(tail.getData());
+
+    }
     public void insert(K key){
         Node<K> node=new Node<>(key);
         node.setNext(tail);
@@ -50,6 +59,26 @@ public class LinkedList<K> {
         }
         return tempNode;
     }
+    public void insertAfter(K previousData,K data){
+        Node newNode=new Node(data);
+        Node<K> tempNode=head;
+        while (!tempNode.getData().equals(previousData)){
+            tempNode=tempNode.getNext();
+        }
+        newNode.setNext(tempNode.getNext());
+        tempNode.setNext(newNode);
+    }
+    public void delete(K deleteData){
+        Node<K> tempNode=head;
+        while (!tempNode.getData().equals(deleteData)){
+            tempNode=tempNode.getNext();
+        }
+        Node<K> previousNode=head;
+        while (!previousNode.getNext().getData().equals(deleteData)){
+            previousNode=previousNode.getNext();
+        }
+        previousNode.setNext(tempNode.getNext());
+    }
     public static void main(String[] args) {
         LinkedList linkedList= new LinkedList();
 
@@ -67,6 +96,11 @@ public class LinkedList<K> {
 //        System.out.println(linkedList.popLast());
 
         System.out.println(linkedList.search(30).getData());
+        linkedList.insertAfter(30,40);
+        linkedList.print();
+
+        linkedList.delete(40);
+        linkedList.print();
 
     }
 }
