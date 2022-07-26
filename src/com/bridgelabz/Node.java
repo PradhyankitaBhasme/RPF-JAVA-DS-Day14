@@ -1,21 +1,20 @@
 package com.bridgelabz;
 
 public class Node<K> {
-    
-    private K key;
+    private K data;
     private Node next;
 
-    public Node(K key) {
-        this.key = key;
+    public Node(K data) {
+        this.data = data;
         this.next = null;
     }
 
-    public K getKey() {
-        return key;
+    public K getData() {
+        return data;
     }
 
-    public void setKey(K key) {
-        this.key = key;
+    public void setData(K data) {
+        this.data = data;
     }
 
     public Node getNext() {
