@@ -24,10 +24,16 @@ public class LinkedList<K> {
             this.tail=node;
         }
     }
+    public void insert(K key){
+        Node<K> node=new Node<>(key);
+        node.setNext(tail);
+        head.setNext(node);
+    }
     public static void main(String[] args) {
         LinkedList linkedList= new LinkedList();
-        linkedList.append(56);
         linkedList.append(30);
         linkedList.append(70);
+
+        linkedList.insert(56);
     }
 }
