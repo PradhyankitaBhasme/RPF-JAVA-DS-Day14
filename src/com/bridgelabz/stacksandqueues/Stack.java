@@ -14,13 +14,20 @@ public class Stack<K> {
     void print(){
         linkedList.print();
     }
+    K pop(){
+        return linkedList.pop();
+    }
 
     public static void main(String[] args) {
         Stack stack=new Stack();
         stack.push(70);
-        stack.push(30);
-        stack.push(56);
-
         stack.print();
+        stack.push(30);
+        stack.print();
+        stack.push(56);
+        stack.print();
+        System.out.println(stack.pop());
+        stack.print();
+
     }
 }
