@@ -28,6 +28,9 @@ public class Stack<K> {
         stack.print();
         System.out.println(stack.pop());
         stack.print();
+        System.out.println(stack.pop());
+        stack.print();
+        System.out.println(stack.pop());
 
     }
 }
