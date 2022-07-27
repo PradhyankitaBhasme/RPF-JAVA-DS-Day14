@@ -1,4 +1,4 @@
-package com.bridgelabz;
+package com.bridgelabz.linkedlist;
 
 public class Node<K> {
     private K data;
